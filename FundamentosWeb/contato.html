@@ -24,24 +24,33 @@
     <h1>Entre em Contato comigo</h1>
 
     <form id="form">
+
         <div class="div-form">
-            <input class="input-area" id="name-input" name="name" autocomplete="off" type="text" />
+            <input class="input-area" id="name-input" name="name" autocomplete="off" type="text" onkeyup="validaNome()" />
             <label id="name-label" for="name-input">
             <span id="name-span">Nome</span>
-        </label>
+            </label>
         </div>
+
+        <div id="txtNome"></div>
+
         <div class="div-form">
-            <input class="input-area" id="email-input" name="email" autocomplete="off" type="text" />
+            <input class="input-area" id="email-input" name="email" autocomplete="off" type="text" onkeyup="validaEmail()" />
             <label id="email-label" for="email-input">
             <span id="email-span">Email</span>
             </label>
         </div>
+
+        <div id="txtEmail"></div>
+
         <div class="div-form">
-            <input class="input-area" id="telefone-input" name="telefone" autocomplete="off" type="text" />
+            <input class="input-area" id="telefone-input" name="telefone" autocomplete="off" type="number" onkeyup="validaTelefone()" />
             <label id="telefone-label" for="telefone-input">
             <span id="telefone-span">Telefone</span>
             </label>
         </div>
+        <div id="txtTelefone"></div>
+
         <button id="btn" onclick="validacaoForms()">Enviar</button>
     </form>
 
@@ -57,7 +66,10 @@
         style="border:0;" 
         allowfullscreen="" 
         loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+        referrerpolicy="no-referrer-when-downgrade" 
+        id="mapa"
+        onmousemove="mapaZoom()"
+        onmouseout="mapaNormal()"></iframe>
     </div>
 
     <footer>
