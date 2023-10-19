@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
-    <link rel="stylesheet" href="./contato.css">
+    <link rel="stylesheet" href="./assets/css/contato.css">
 </head>
 <body>
     <header>
@@ -23,26 +23,26 @@
    
     <h1>Entre em Contato comigo</h1>
 
-    <form>
+    <form id="form">
         <div class="div-form">
-            <input class="input-area" id="name-input" name="name" autocomplete="off" required />
-            <label id="name-label" for="name">
+            <input class="input-area" id="name-input" name="name" autocomplete="off" type="text" />
+            <label id="name-label" for="name-input">
             <span id="name-span">Nome</span>
         </label>
         </div>
         <div class="div-form">
-            <input class="input-area" id="email-input" name="email" autocomplete="off" required />
-            <label id="email-label" for="email">
+            <input class="input-area" id="email-input" name="email" autocomplete="off" type="text" />
+            <label id="email-label" for="email-input">
             <span id="email-span">Email</span>
             </label>
         </div>
         <div class="div-form">
-            <input class="input-area" id="telefone-input" name="telefone" autocomplete="off" required />
-            <label id="telefone-label" for="telefone">
+            <input class="input-area" id="telefone-input" name="telefone" autocomplete="off" type="text" />
+            <label id="telefone-label" for="telefone-input">
             <span id="telefone-span">Telefone</span>
             </label>
         </div>
-        <button>Enviar</button>
+        <button id="btn" onclick="validacaoForms()">Enviar</button>
     </form>
 
     <h2>Endereço: </h2>
@@ -73,6 +73,7 @@
         </div>
     </footer>
    
-    
+
+<script src="./assets/script/script.js"></script>    
 </body>
 </html>
